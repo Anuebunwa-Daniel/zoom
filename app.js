@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const crypto = require('crypto');
@@ -5,6 +6,8 @@ const mongoose = require('mongoose');
 const path =require('path')
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+
+
 
 
 const adminR = require('./routes/adminR.js');
@@ -44,7 +47,7 @@ mongoose.connect(model.database)
 
 
 // --- Start the server ---
-const port = 3000;
+const port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Server connected to port ${port}`);
 });
