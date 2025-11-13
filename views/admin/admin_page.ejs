@@ -47,34 +47,17 @@
       </form>
 
       <!-- Generated link area -->
-      <!-- <div id="linkBox" class="link-box mt-3">
-          <% if (dbLink && dbLink.link) { %>
-      <div class="mt-4 text-center">
-        <h6 class="text-success">✅ Link generated successfully:</h6>
-        <div class="input-group mt-2">
-          <input type="text" id="inviteLink" class="form-control" value="<%= dbLink.link %>" readonly>
-          <button class="btn btn-outline-secondary" type="button" onclick="copyLink()">Copy</button>
+      <% if (dbLink && dbLink.link) { %>
+        <div class="mt-4 text-center">
+          <h6 class="text-success">✅ Link generated successfully:</h6>
+          <div class="input-group mt-2">
+            <input type="text" id="inviteLink" class="form-control" value="<%= dbLink.link %>" readonly>
+            <% } else { %>
+              <p>No link has been generated yet.</p>
+              <button class="btn btn-primary" type="button" onclick="copyLink()">Copy</button>
+          </div>
         </div>
-      </div> -->
-      <!-- <% } %> -->
-      <!-- <div class="d-flex gap-2 align-items-center">
-          <div class="flex-grow-1 link-input" id="generatedLink" title="Generated link will appear here">tffoftygyggoyugy</div>
-          <button id="copyBtn" class="btn btn-outline-secondary btn-sm">Copy</button>
-          <a id="openBtn" class="btn btn-primary btn-sm" href="#" target="_blank">Open</a>
-        </div> -->
-
-      <!-- <% if (dbLink && dbLink.link) { %>
-        <input value="<%= dbLink.link %>" />
-        <% } %> -->
-        <% if (dbLink && dbLink.link) { %>
-  <div class="mt-4 text-center">
-    <h6 class="text-success">✅ Link generated successfully:</h6>
-    <div class="input-group mt-2">
-      <input type="text" id="inviteLink" class="form-control" value="<%= dbLink.link %>" readonly>
-      <button class="btn btn-primary" type="button" onclick="copyLink()">Copy</button>
-    </div>
-  </div>
-<% } %>
+        <% } %>
     </div>
 
   </div>
