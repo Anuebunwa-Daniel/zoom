@@ -47,8 +47,8 @@ router.post('/invitation/:token/login', async (req, res) => {
 const transporter = nodemailer.createTransport({
     service: 'gmail', // or your mail provider
     auth: {
-        user: 'achibuzor5@gmail.com', // company email
-        pass: 'vowh dhoo utwi pgtu' // use App Password for Gmail
+        user: process.env.Email_user, // company email
+        pass: process.env.Email_pass // use App Password for Gmail
     }
 });
 
