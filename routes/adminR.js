@@ -13,6 +13,10 @@ router.get('/', (req, res) => {
   res.render('admin/admin_page', { dbLink: null});
 });
 
+router.get('/admin_page', (req, res) => {
+  res.render('admin/admin_page', { dbLink: null});
+});
+
 
 // POST form (create invite)
 router.post('/admin_page', async (req, res) => {
